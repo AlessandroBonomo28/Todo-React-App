@@ -10,7 +10,7 @@ export const CustomButton = styled.button`
     props.color? props.color : COLORS.primaryTextColor};
   height: 40px;
   width: 100px;
-  max-width: 200px;
+  max-width: 100px;
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
