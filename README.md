@@ -1,5 +1,5 @@
 # Todo React App
- Simple todo app using react
+ Simple todo app using Typescript + React + Vite.
 ## How to create a new project
 Check that you have node installed
 > node -v
@@ -13,3 +13,5 @@ Select React, Typescript, enter project name
 > npm install
 >
 > npm run dev
+## Libraries
+- styled-components
