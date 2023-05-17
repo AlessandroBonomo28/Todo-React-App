@@ -1,6 +1,6 @@
 # Todo React App
- Simple todo app using Typescript + React + Vite.
-## How to create a new project
+Simple todo app using Typescript + React + Vite.
+## Create a react-app with Vite
 Check that you have node installed
 > node -v
 
@@ -13,5 +13,5 @@ Select React, Typescript, enter project name
 > npm install
 >
 > npm run dev
-## Libraries
+## Front end Libraries
 - styled-components
