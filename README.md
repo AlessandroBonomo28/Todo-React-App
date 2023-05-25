@@ -14,3 +14,8 @@ Select React, Typescript, enter project name
 >
 > npm run dev
 
+# Avoid Bad practice for React
+https://tekolio.com/reactjs-bad-practices-and-how-to-avoid-them/
+
+this article explained one of my doubts: deconstructing props. Deconstructing props increases legibility of code and it's good to have a *prop* interface for every react component like *Todo* -> TodoProps, *TodoList* -> TodoListProps
+
