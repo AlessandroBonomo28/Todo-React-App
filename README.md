@@ -1,17 +1,17 @@
-# Todo React App
+# Todo React + MaterialUI App
 Simple todo app using Typescript + React + Vite and **MaterialUI** for responsive + styled UI.
 ## Create a react-app with Vite
 Check that you have node installed
 > node -v
 
-Use react vite for a quick node + react + vite project environment setup
+Use react vite for a quick node + react + vite project environment setup (then Select React, Typescript, enter project name)
 > npm create vite@latest
-
-(Now Select React, Typescript, enter project name)
 
 **Or create vite react+vite+typescript app with one command**
 
 > npx create-vite@latest my-app --template react-ts
+
+Now enter the app, install and run in dev mode
 
 > cd your-app
 > 
@@ -19,6 +19,10 @@ Use react vite for a quick node + react + vite project environment setup
 >
 > npm run dev
 
+When you are ready for production
+> npm run build
+
+You will find your app built in the *./dist* directory
 ## install material UI library
 > npm install @mui/material @emotion/react @emotion/styled
 
