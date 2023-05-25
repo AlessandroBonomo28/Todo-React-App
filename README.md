@@ -1,5 +1,5 @@
 # Todo React App
-Simple todo app using Typescript + React + Vite and **Mantine** as component library.
+Simple todo app using Typescript + React + Vite and **MaterialUI** for responsive + styled UI.
 ## Create a react-app with Vite
 Check that you have node installed
 > node -v
