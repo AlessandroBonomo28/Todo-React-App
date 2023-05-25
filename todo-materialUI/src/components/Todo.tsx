@@ -3,13 +3,13 @@ import { Typography, Card, CardContent,IconButton, Container, Chip} from '@mui/m
 import DoneIcon from '@mui/icons-material/Done';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export interface ITodoItem {
+export interface TodoProps {
   id: number;
   title: string;
   isCompleted: boolean;
 }
 
-const Todo = ({id, title, isCompleted}: ITodoItem) => {
+const Todo = ({id, title, isCompleted}: TodoProps) => {
   return (
     <div>
         <Container>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container } from '@mui/material'
 import Todo from './Todo'
-import {ITodoItem as ITodoItem} from './Todo'
+import {TodoProps as TodoProps} from './Todo'
 
 interface TodoListProps {
-  todos: ITodoItem[];
+  todos: TodoProps[];
 }
 
 const TodoList = ({ todos } : TodoListProps) => {

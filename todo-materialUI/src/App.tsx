@@ -2,10 +2,10 @@ import React, {useState} from "react"
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 import { Typography } from '@mui/material';
-import {ITodoItem} from './components/Todo'
+import {TodoProps} from './components/Todo'
 
 export default function App() {
-  const [todos,setTodos] = useState<ITodoItem[]>([
+  const [todos,setTodos] = useState<TodoProps[]>([
     {
       id:1,
       title:"Fare la spesa",
