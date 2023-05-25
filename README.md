@@ -34,4 +34,5 @@ icons
 https://tekolio.com/reactjs-bad-practices-and-how-to-avoid-them/
 
 This article explained one of my doubts: deconstructing props. Deconstructing props increases legibility of code and it's good to have a *prop* interface for every react component like *Todo* -> *TodoProps*, *TodoList* -> *TodoListProps*
-
+# Tips
+If you tipe *rafce* and hit enter  
