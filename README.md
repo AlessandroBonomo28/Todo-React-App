@@ -65,6 +65,10 @@ export default App
  ```
  ## Differenza tra Arrow function e function
  La arrow function è una versione semplificata della function. In questo progetto ho utilizzato l'arrow function per definire funzioni nell'**App.tsx** (che sarebbe un pò come il main dell'applicazione). Preferisco definire i components con la sintassi della function invece dell'arrow function.
+ # Un buon esempio di programmazione
+ In questo esempio c'è un Form con un inputText e un pulsante. Quando il pulsante viene premuto, viene eseguito: *handleSubmit* (di ComponentForm) -> *doSomethingFunction* (di Component Form) -> *doSomethingInMainApp* (di App.tsx). Questo esempio racchiude in poche righe buone pratiche di programmazione e modularità del codice. 
+ - **Le arrow function** vengono usate per gestire eventi 
+ - **le function** sono più adatte a definire e esportare components.
   ```
  # In App.tsx
  
@@ -88,11 +92,14 @@ export default App
 }
  
  export default function ComponentForm({ id, doSomethingFunction }: ComponentProps) {
+ 
  const [attributeText,setAttributeText] = useState<string>("");
+ 
  const handleSubmit = (e : React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault(); // annulla la ricarica della pagina
     doSomethingFunction(attributeText); // chiama la funzione passata dal main App.tsx
   } 
+  
  return (
       <div>
         <form onSubmit={(e)=>handleSubmit(e)}>
@@ -103,7 +110,7 @@ export default App
     )
  }
   ```
- # Utilzzare le interfacce per definire i props di un component
+ # Utilzzare sempre le interfacce per definire i props di un component
  ```
 
 export interface TodoProps {
