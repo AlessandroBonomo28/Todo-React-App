@@ -35,4 +35,90 @@ https://tekolio.com/reactjs-bad-practices-and-how-to-avoid-them/
 
 This article explained one of my doubts: deconstructing props. Deconstructing props increases legibility of code and it's good to have a *prop* interface for every react component like *Todo* -> *TodoProps*, *TodoList* -> *TodoListProps*
 # Tips
-If you tipe *rafce* and hit enter you will be completed with an *arrow function*
+### Comparator
+Utilizza === invece di ==, e !== invece di !=
+### React arrow function component export
+If you tipe *rafce (react arrow function component export)* and hit enter you will be completed with 
+ ```
+ import React from 'react'
+
+const App = () => {
+  return (
+    <div>App</div>
+  )
+}
+
+export default App
+ ```
+ ### React function component export
+If you tipe *rfce (react function component export)* and hit enter you will be completed with 
+ ```
+import React from 'react'
+
+function App() {
+  return (
+    <div>App</div>
+  )
+}
+
+export default App
+ ```
+ ## Differenza tra Arrow function e function
+ La arrow function è una versione semplificata della function. In questo progetto ho utilizzato l'arrow function per definire funzioni nell'**App.tsx** (che sarebbe un pò come il main dell'applicazione). Preferisco definire i components con la sintassi della function invece dell'arrow function.
+  ```
+ # In App.tsx
+ 
+ const doSomethingInMainApp = (textFromComponent:string) => {
+    ... 
+    alert("Do something with "+textFromComponent);
+ }
+ 
+ return (
+    <div>
+        <ComponentForm id={1} doSomethingFunction={doSomethingInMainApp}/>
+    </div>
+ )
+ 
+ 
+ # In ComponentForm.tsx
+ 
+ export interface ComponentFormProps {
+  id: number;
+  doSomethingFunction: (text_attr:string) => void;
+}
+ 
+ export default function ComponentForm({ id, doSomethingFunction }: ComponentProps) {
+ const [attributeText,setAttributeText] = useState<string>("");
+ const handleSubmit = (e : React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault(); // annulla la ricarica della pagina
+    doSomethingFunction(attributeText); // chiama la funzione passata dal main App.tsx
+  } 
+ return (
+      <div>
+        <form onSubmit={(e)=>handleSubmit(e)}>
+        <TextField onChange={(e)=>{setAttributeText(e.target.value)}}/>
+        <Button type="submit" >DO SOMETHING</Button>
+        </form>
+      </div>
+    )
+ }
+  ```
+ # Utilzzare le interfacce per definire i props di un component
+ ```
+
+export interface TodoProps {
+  id: number;
+  title: string;
+  isCompleted: boolean;
+  onToggleCompleted: (id:number) => void;
+  onDelete: (id:number) => void;
+}
+
+export default function Todo({id, title, isCompleted, onToggleCompleted, onDelete}: TodoProps) {
+  return (
+    <div>
+        ...
+    </div>
+  )
+}
+ ```
