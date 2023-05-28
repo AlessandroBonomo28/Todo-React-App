@@ -72,6 +72,7 @@ export default App
 
  #### App.tsx
    ```
+ export default function App() {
  const doSomethingInMainApp = (textFromComponent:string) => {
     ... 
     alert("Do something with "+textFromComponent);
@@ -81,7 +82,8 @@ export default App
     <div>
         <ComponentForm id={1} doSomethingFunction={doSomethingInMainApp}/>
     </div>
- )
+ );
+ }
    ```
  
  #### ComponentForm.tsx
@@ -107,7 +109,7 @@ export default App
         <Button type="submit" >DO SOMETHING</Button>
         </form>
       </div>
-    )
+    );
  }
   ```
  # Utilzzare sempre le interfacce per definire i props di un component
