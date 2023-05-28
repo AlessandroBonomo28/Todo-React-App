@@ -69,9 +69,9 @@ export default App
  In questo esempio c'è un Form con un inputText e un pulsante. Quando il pulsante viene premuto, viene eseguito: *handleSubmit* (di ComponentForm) -> *doSomethingFunction* (di Component Form) -> *doSomethingInMainApp* (di App.tsx). Questo esempio racchiude in poche righe buone pratiche di programmazione e modularità del codice. Riassumendo...
  - **Le ARROW FUNCTION** sono più adatte per gestire eventi 
  - **le FUNCTION** sono più adatte a definire e esportare components.
-  ```
- # In App.tsx
- 
+
+ #### App.tsx
+   ```
  const doSomethingInMainApp = (textFromComponent:string) => {
     ... 
     alert("Do something with "+textFromComponent);
@@ -82,10 +82,10 @@ export default App
         <ComponentForm id={1} doSomethingFunction={doSomethingInMainApp}/>
     </div>
  )
+   ```
  
- 
- # In ComponentForm.tsx
- 
+ #### ComponentForm.tsx
+   ```
  export interface ComponentFormProps {
   id: number;
   doSomethingFunction: (text_attr:string) => void;
