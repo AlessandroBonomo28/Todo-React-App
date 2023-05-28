@@ -71,7 +71,16 @@ export default App
   - **Le ARROW FUNCTION** sono più adatte per gestire eventi 
  - **le FUNCTION** sono più adatte a definire e esportare components.
  # Un buon esempio di programmazione
- In questo esempio c'è un Form con un inputText e un pulsante. Quando il pulsante viene premuto, viene eseguito: *handleSubmit* (di ComponentForm) -> *doSomethingFunction* (di Component Form) -> *doSomethingInMainApp* (di App.tsx). Questo esempio racchiude in poche righe buone pratiche di programmazione e modularità del codice. Ecco l'esempio:
+ In questo esempio c'è un Form con un inputText e un pulsante. Quando il pulsante viene premuto, viene eseguito: *handleSubmit* (di ComponentForm) -> *doSomethingFunction* (di Component Form) -> *doSomethingInMainApp* (di App.tsx). Questo esempio racchiude in poche righe buone pratiche di programmazione e modularità del codice. 
+ 
+ Regole applicate in questo esempio:
+ - Utilizzo delle function per esportare components
+ - Utilizzo delle arrow function per gestire eventi e modificare la struttura della pagina
+ - Definizione di un'interfaccia di props per il component
+ - Destrutturazione delle props di un component
+ - Utilizzo di *e.preventDefault()* per abortire la catena di chiamate dell'evento form submit.
+ - Utilizzo di hooks nel component per gestire lo stato variabile del testo
+ - Definizione di arrow function nel component (l'handler dell'evento submit)
 
  #### App.tsx
    ```
