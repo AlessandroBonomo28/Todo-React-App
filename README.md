@@ -1,4 +1,4 @@
-# Todo React + MaterialUI App
+# Todo App using React + MaterialUI 
 Simple todo app using Typescript + React + Vite and **MaterialUI** UI library for automatic styling and responsiveness.
 
 ![appTodoDecente](https://github.com/AlessandroBonomo28/Todo-React-App/assets/75626033/cf4e37b1-dd9a-4cb8-8f25-37c9dd5301b1)
